@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 
 const fresca = localFont({
   src: [
-    { path: "../public/fonts/Fresca-Regular.ttf", weight: "400" }
+    { path: "../../public/fonts/Fresca-Regular.ttf", weight: "400" }
   ],
   variable: "--font-fresca",
 })
 
 const fruktur = localFont({
   src: [
-    { path: "../public/fonts/Fruktur-Regular.ttf", weight: "400" }
+    { path: "../../public/fonts/Fruktur-Regular.ttf", weight: "400" }
   ],
   variable: "--font-fruktur",
 })
 
 const fustat = localFont({
   src: [
-    { path: "../public/fonts/Fustat-Regular.ttf", weight: "400" }
+    { path: "../../public/fonts/Fustat-VariableFont_wght.ttf", weight: "400" }
   ],
   variable: "--font-fustat",
 })
