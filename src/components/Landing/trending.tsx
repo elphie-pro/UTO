@@ -32,19 +32,19 @@ export default function Page() {
         },
     ]
     return (
-        <div className="w-full block max-w-7xl mx-auto px-4 md:pb-2 pt-14 overflow-hidden">
+        <div className="w-full block max-w-7xl mx-auto px-4 md:pb-2 pt-14">
             <div className="flex justify-between">
                 <h1 className="text-4xl">Trending Blogs</h1>
                 <button><Image src='/teenyicons_right-solid.svg' alt="" width={30} height={10}/></button>
             </div>
-            <div className="flex gap-4 ">
+            <div className="flex gap-4 pt-8">
                 {trends.map((trend) => {
                     return <div key={trend.name} className="w-[40rem] h-[15rem] ">
                         <div className="flex flex-col">
                             <Image src={trend.photo} alt="" width={50} height={20} className="w-full"/>
-                            <div className="bg-[#e8dfc9] p-4">
-                                <h1>{trend.name}</h1>
-                                <p>{trend.description}</p>
+                            <div className="bg-[#e8dfc9] p-4 flex flex-col gap-2">
+                                <h1 className="text-xl font-semibold">{trend.name}</h1>
+                                <p className="text-sm text-[#5b5c5d] leading-4">{trend.description}</p>
                                 <div className="flex justify-end">
                                     <Image src='/flat-color-icons_reading-ebook.svg' alt="" width={10} height={10}/>
                                     <Link href='/'>Read More</Link>

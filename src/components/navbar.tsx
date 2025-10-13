@@ -7,7 +7,7 @@ export default function Page() {
     return (
       <div className="w-full block mx-auto md:pb-0">
         <div className="h-[10rem] w-full p-4 bg-cover" style={{ backgroundImage: "url('/screenshot-2025-10-11-1.svg')" }}>
-            <div className="w-full block max-w-7xl mx-auto px-4 md:pb-2 overflow-hidden">
+            <div className="w-full block max-w-7xl mx-auto px-4 md:pb-2">
                 <div className="flex gap-[7rem]">
                     <h1 className="text-white text-[8rem] mt-[-3rem] font-black font-fruktur">ụtọ</h1>
                     <div className="flex">
