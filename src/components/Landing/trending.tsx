@@ -39,10 +39,10 @@ export default function Page() {
             </div>
             <div className="flex gap-4 pt-8">
                 {trends.map((trend) => {
-                    return <div key={trend.name} className="w-[40rem] h-[15rem] ">
+                    return <div key={trend.name} className="w-[40rem] h-full ">
                         <div className="flex flex-col">
                             <Image src={trend.photo} alt="" width={50} height={20} className="w-full"/>
-                            <div className="bg-[#e8dfc9] h-[10rem] p-4 flex flex-col gap-2">
+                            <div className="bg-[#e8dfc9] h-full p-4 flex flex-col gap-2">
                                 <h1 className="text-xl font-semibold">{trend.name}</h1>
                                 <p className="text-sm text-[#5b5c5d] leading-4">{trend.description}</p>
                                 <div className="flex justify-end">
@@ -55,6 +55,15 @@ export default function Page() {
                         </div>
                     </div>
                 })}
+            </div>
+            <div className="flex justify-between pt-[8rem] pb-10">
+                <div className="w-[130rem]">
+                    <Image src='/image 5.svg' alt="" width={10} height={10} className="w-full"/>
+                </div>
+                <div className="flex flex-col gap-6">
+                    <h1 className="text-5xl font-bold font-fustat">Nigeria’s Most Beloved Staple</h1>
+                    <p className="text-xl">Rice is undeniably Nigeria’s most beloved staple, woven into the fabric of daily life and  celebrations alike. From the festive, vibrant Jollof rice to the comforting fried rice and  the unique, regional varieties like Ofada rice, it’s hard to imagine a Nigerian meal  without it. Whether it’s served at family gatherings, street food stalls, or special  occasions, rice has earned its place at the center of Nigerian dining. It’s versatile, affordable, and deeply satisfying, making it the go-to dish for millions across the  country. In Nigeria, rice isn’t just food—it’s tradition, culture, and a symbol of togetherness.</p>
+                </div> 
             </div>
         </div>
     );
