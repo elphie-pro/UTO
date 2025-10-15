@@ -56,7 +56,7 @@ export default function Page() {
                     </div>
                 })}
             </div>
-            <div className="flex justify-between pt-[8rem] pb-10">
+            <div className="flex justify-between pt-[6rem] pb-10">
                 <div className="w-[130rem]">
                     <Image src='/image 5.svg' alt="" width={10} height={10} className="w-full"/>
                 </div>
