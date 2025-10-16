@@ -6,6 +6,13 @@ type imageProps = {
     photo:string
 }
 
+type membersProps = {
+    name:string,
+    photo:string,
+    profile:string,
+    description:string
+}
+
 export default function Page() {
     const images:imageProps[] = [
         {
@@ -26,6 +33,27 @@ export default function Page() {
         }
     ]
 
+    const members:membersProps[] = [
+        {
+            name: 'Jane Doe',
+            photo: '/imag6.svg',
+            profile: '/Ellipse 1.svg',
+            description: 'It was a treat! Smooth, creamy, and just the right sweetness. The texture was perfect—not too thick or runny. It felt like the kind of dessert that’s simple but always hits the spot. Definitely a classic I’ll go back to.'
+        },
+        {
+            name: 'John Doe',
+            photo: '/image7.svg',
+            profile: '/Ellipse 2.svg',
+            description: 'IThe crust was golden and flaky, and the filling was packed with flavor—perfectly seasoned meat and veggies. It was hearty without being too heavy, and each bite was just the right balance of crispy and savory.'
+        },
+        {
+            name: 'Jane Doe',
+            photo: '/imag7.svg',
+            profile: '/Ellipse 3.svg',
+            description: 'The banana bread was decent. It was soft and had a good balance of sweetness, though it could’ve had a bit more flavor or spice. Still, a solid, comforting choice for a snack or breakfast.'
+        }
+    ]
+
     return (
         <div className="w-full block max-w-7xl mx-auto px-4 md:pb-8 pt-14">
             <h1 className="text-4xl ">Rice Dishes</h1>
@@ -43,8 +71,18 @@ export default function Page() {
                {/* <div className="ml-[40rem]"><p className="absolute">SET</p></div> */}
                <div className="flex flex-col gap-4 justify-center-safe items-start ml-[5rem] p-2 font-fustat">
                 <h1 className="text-4xl font-semibold">Nigerain Breakfast Ideas</h1>
-                <p className="w-[30rem]"> From the rich, hearty Akara (fried bean cakes) paired with Pap, to the classic Moi Moi (steamed bean pudding), there's a dish for every mood and taste. Or kickstart your morning with the popular Agege bread with custard, or indulge in Beans and Plantains for a filling, nutritious start.</p>
+                <p className="w-[30rem]"> From the rich, hearty Akara (fried bean cakes) paired with Pap, to the classic Moi Moi (steamed bean pudding), there’s a dish for every mood and taste. Or kickstart your morning with the popular Agege bread with custard, or indulge in Beans and Plantains for a filling, nutritious start.</p>
                </div>
+                </div>
+            </div>
+            <div className="pt-12">
+                <h1 className="text-4xl">From Our Members</h1>
+                <div className="flex flex-col">
+                    {members.map((member) => {
+                        return <div key={member.name}>
+
+                        </div>
+                    })}
                 </div>
             </div>
         </div>
