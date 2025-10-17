@@ -47,7 +47,7 @@ export default function Page() {
             description: 'IThe crust was golden and flaky, and the filling was packed with flavor—perfectly seasoned meat and veggies. It was hearty without being too heavy, and each bite was just the right balance of crispy and savory.'
         },
         {
-            name: 'Jane Doe',
+            name: 'John Dej',
             photo: '/imag7.svg',
             profile: '/Ellipse 3.svg',
             description: 'The banana bread was decent. It was soft and had a good balance of sweetness, though it could’ve had a bit more flavor or spice. Still, a solid, comforting choice for a snack or breakfast.'
@@ -77,10 +77,19 @@ export default function Page() {
             </div>
             <div className="pt-12">
                 <h1 className="text-4xl">From Our Members</h1>
-                <div className="flex flex-col">
+                <div className="flex gap-4 pt-8">
                     {members.map((member) => {
-                        return <div key={member.name}>
-
+                        return <div key={member.name} className="w-[40rem]">
+                            <div className="flex flex-col">
+                                  <Image src={member.photo} alt="" width={10} height={10} className="w-auto"/>
+                                  <div className="flex flex-col gap-4 border-1 shadow-xl border-none p-4">
+                                    <div className="flex gap-2 items-center">
+                                        <Image src={member.profile} alt="" width={30} height={30} className="rounded-full"/>
+                                        <h1>{member.name}</h1>
+                                    </div>
+                                        <p className="w-[20rem]">{member.description}</p>
+                                  </div>
+                            </div>
                         </div>
                     })}
                 </div>
