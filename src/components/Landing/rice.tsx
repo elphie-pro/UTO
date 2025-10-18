@@ -91,11 +91,27 @@ export default function Page() {
                                         <p className="font-fustat px-9">{member.description}</p>
                                     </div>
                                     <div className="flex justify-end">
-                                        <label htmlFor="">
-                                            <input type="radio" name="" id="" className="absolute peer hidden"/>
-                                            <Image src='/typcn_heart.svg' alt="" width={20} height={20} className="w-full h-full opacity-30 transition-all duration-300 group-hover:opacity-60"/>
-                                            <Image src='/typcn_heart colored.svg' alt="" width={20} height={20} className="w-full h-full absolute top-0 left-0 opacity-0 peer-checked:opacity-100 transition-all duration-300" style={{filter: "brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(4392%) hue-rotate(340deg) brightness(92%) contrast(106%)"}}/>
-                                        </label>
+                                        <label className="cursor-pointer group relative inline-block w-[1.8rem] h-[1.8rem]">
+                                            <input 
+                                                type="checkbox" 
+                                                name="rating" 
+                                                className="sr-only" 
+                                            />
+                                            <Image 
+                                                src='/typcn_heart.svg' 
+                                                alt="" 
+                                                width={20} 
+                                                height={20} 
+                                                className="w-full h-full opacity-30 transition-all duration-300 group-hover:opacity-60 group-has-[:checked]:opacity-0"
+                                            />
+                                            <Image 
+                                                src='/typcn_heart colored.svg' 
+                                                alt="" 
+                                                width={20} 
+                                                height={20} 
+                                                className="w-full h-full absolute top-0 left-0 opacity-0 transition-all duration-300 group-has-[:checked]:opacity-100"
+                                            />
+                                            </label>
                                     </div>
                                   </div>
                             </div>
