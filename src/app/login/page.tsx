@@ -1,14 +1,15 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
     return (
         <div className="bg-[#f4f4f4] w-full block max-w-8xl mx-auto md:pb-14 px-12 pt-14">
             <div className="flex justify-center items-center">
                 <div>
-                    <Image src='/image 6.svg' alt="" width={10} height={10} className="w-full" />
+                    <Image src='/image 6.svg' alt="" width={10} height={10} className="w-full shadow-xl" />
                 </div>
-                <div className="w-[40rem] h-[52rem] bg-[#fff] p-10">
+                <div className="w-[40rem] h-[52rem] bg-[#fff] p-10 shadow-xl">
                     <div className="flex flex-col gap-5">
                         <div className="flex justify-end">
                              <h1 className="text-[#c4a77d] text-[8rem] mt-[-3rem] font-black font-fruktur">ụtọ</h1>
@@ -26,10 +27,29 @@ export default function Page() {
                                 <label htmlFor="">Password</label>
                                 <input type="password" placeholder="**************" className="w-full h-[3rem] outline-none rounded-md p-2 bg-[#e8dfc9] opcaity-5"/>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex justify-between font-fustat">
                             <div className="flex gap-3">
                                  <input type="radio" name="" id="" className="w-[1rem] outline-none accent-[#e8dfc9]"/>
-                                 <p className="text-xl">Remember me</p>
+                                 <p className="text-lg">Remember me</p>
+                            </div>
+                            <Link href='/' className="text-[#c4a77d] text-lg underline">Forgot Password</Link>
+                        </div>
+                        <div className="font-fustat">
+                            <button className="w-full h-[3rem] bg-[#e8dfc9] text-[#c4a77d] text-xl rounded-md">Sign In</button>
+                        </div>
+                        <div className="flex flex-col gap-4 items-center justify-center font-fustat">
+                            <h1 className="text-lg">Don’t Have an Account? <Link href='/' className="text-[#bf9d78]">Sign Up</Link></h1>
+                            <p className="text-5xl text-[#c4a77d]">OR</p>
+                            <div className="flex gap-9">
+                                <div>
+                                    <Link href='/'><Image src='/flat-color-icons_google.svg' alt="" width={30} height={30} className="w-full bg-[#f2ede1] p-3 rounded-full"/></Link>
+                                </div>
+                                <div>
+                                    <Link href='/'><Image src='/basil_apple-solid.svg' alt="" width={30} height={30} className="w-full bg-[#f2ede1] p-3 rounded-full"/></Link>
+                                </div>
+                                <div>
+                                    <Link href='/'><Image src='/logos_facebook.svg' alt="" width={30} height={30} className="w-full bg-[#f2ede1] p-3 rounded-full"/></Link>
+                                </div>
                             </div>
                         </div>
                     </div> 
