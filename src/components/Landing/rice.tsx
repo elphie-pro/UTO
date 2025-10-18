@@ -44,7 +44,7 @@ export default function Page() {
             name: 'John Doe',
             photo: '/image7.svg',
             profile: '/Ellipse 2.svg',
-            description: 'IThe crust was golden and flaky, and the filling was packed with flavor—perfectly seasoned meat and veggies. It was hearty without being too heavy, and each bite was just the right balance of crispy and savory.'
+            description: 'The crust was golden and flaky, and the filling was packed with flavor—perfectly seasoned meat and veggies. It was hearty without being too heavy, and each bite was just the right balance of crispy and savory.'
         },
         {
             name: 'John Dej',
@@ -82,12 +82,21 @@ export default function Page() {
                         return <div key={member.name} className="w-[40rem]">
                             <div className="flex flex-col">
                                   <Image src={member.photo} alt="" width={10} height={10} className="w-auto"/>
-                                  <div className="flex flex-col gap-4 border-1 shadow-xl border-none p-4">
+                                  <div className="flex flex-col gap-4 border-1 shadow-xl border-none p-4 h-[16.5rem]">
                                     <div className="flex gap-2 items-center">
                                         <Image src={member.profile} alt="" width={30} height={30} className="rounded-full"/>
-                                        <h1>{member.name}</h1>
+                                        <h1 className="text-xl font-fustat">{member.name}</h1>
                                     </div>
-                                        <p className="w-[20rem]">{member.description}</p>
+                                    <div className="h-[25rem]">
+                                        <p className="font-fustat px-9">{member.description}</p>
+                                    </div>
+                                    <div className="flex justify-end">
+                                        <label htmlFor="">
+                                            <input type="radio" name="" id="" className="absolute peer hidden"/>
+                                            <Image src='/typcn_heart.svg' alt="" width={20} height={20} className="w-full h-full opacity-30 transition-all duration-300 group-hover:opacity-60"/>
+                                            <Image src='/typcn_heart colored.svg' alt="" width={20} height={20} className="w-full h-full absolute top-0 left-0 opacity-0 peer-checked:opacity-100 transition-all duration-300" style={{filter: "brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(4392%) hue-rotate(340deg) brightness(92%) contrast(106%)"}}/>
+                                        </label>
+                                    </div>
                                   </div>
                             </div>
                         </div>
